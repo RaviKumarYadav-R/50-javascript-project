@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.wrapper {
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px #000;
+}
+
+.wrapper h1{
+    font-size: 1.5rem;text-align: center;
+}
+
+#generate-user {
+  padding: 0.5rem 1rem;
+  display: block;
+  margin: 1rem auto;
+  cursor: pointer;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  border-top: 1px solid #000;
+  padding-top: 1rem;
+}
+
+.user-info img {
+  width: 100px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  object-fit: cover;
+}

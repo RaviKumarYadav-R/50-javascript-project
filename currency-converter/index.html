@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currency converter</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <input type="number" placeholder="Enter Amount" id="amount-input" />
+      <div class="group-box">
+        <div class="group">
+          <label>From</label>
+          <select id="selectFrom"></select>
+        </div>
+        <div class="group">
+          <label>To</label>
+          <select id="selectTo"></select>
+        </div>
+      </div>
+
+      <button class="convert">Convert Currency</button>
+      <div class="result">1 USD ➟ 86.22 INR</div>
+    </div>
+  </body>
+</html>

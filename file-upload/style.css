@@ -1,0 +1,35 @@
+.wrapper {
+  max-width: 600px;
+  margin: 2rem auto;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+label {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 12px 24px;
+  border: 2px dashed #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s;
+}
+
+label:hover {
+  border-color: #888;
+}
+
+i {
+  margin-right: 8px;
+}
+
+#preview {
+  margin-top: 20px;
+  width: 300px;
+  margin-inline: auto;
+}
+
+#preview img {
+  max-width: 100%;
+  height: auto;
+}

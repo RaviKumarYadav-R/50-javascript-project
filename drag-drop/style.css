@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  gap: 1rem;
+}
+
+.drop-area{
+    width: 200px;
+    height: 300px;
+    border: 1px solid #000;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.drop-area p{
+    background-color: lightcyan;
+    margin-bottom: 0.5rem;
+    padding: 0.6rem;
+    border-radius: 8px;
+    border: 1px solid #000;
+    cursor: grab;
+}

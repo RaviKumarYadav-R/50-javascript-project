@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Character Counter</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>Character Counter</h1>
+      <textarea
+        id="text-input"
+        rows="10"
+        cols="30"
+        placeholder="Type something..."
+      ></textarea>
+      <div id="char-count">Character Count: 0</div>
+    </div>
+
+    <script>
+      const textArea = document.querySelector("#text-input");
+      const charCount = document.querySelector("#char-count");
+
+      textArea.addEventListener("input", () => {
+        charCount.innerHTML = `character Count: ${textArea.value.length}`;
+      });
+    </script>
+  </body>
+</html>

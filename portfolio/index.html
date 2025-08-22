@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <main>
+        <header>
+            <a href="#" class="logo">Ravi<span>.DEV</span></a>
+            <nav>
+                <ul>
+                    <li><a class="active" href="#">Home</a></li>
+                    <li><a href="#about">About us</a></li>
+                    <li><a href="#project">Projects</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </nav>
+
+            <div class="social-media">
+                <a href="#" aria-label="instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <button class="theme"><i class="fa-solid fa-moon"></i></button>
+                <button class="hamburger"><i class="fa-solid fa-bars"></i></button>
+            </div>
+
+        </header>
+
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Hi, I'm <span class="highlight">Ravi Kumar</span> 👋</h1>
+                <h2>I build interactive websites & modern web apps</h2>
+                <p>
+                    I'm a self-taught developer passionate about crafting beautiful,
+                    responsive, and user-friendly web experiences. This portfolio
+                    showcases my <strong>50 JavaScript Projects</strong> — from
+                    fun mini-apps to fully functional web tools.
+                </p>
+                <div class="hero-buttons">
+                    <a href="../index.html" target="_blank" class="btn-primary">View My Projects</a>
+                    <a href="#contact" class="btn-outline">Contact Me</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img class="floot html" src="./images/html.svg" alt="html">
+                <img class="floot css" src="./images/css.svg" alt="html">
+                <img class="floot js" src="./images/js.svg" alt="html">
+                <img src="./images/hero.svg" alt="Ravi Kumar" />
+            </div>
+        </section>
+    </main>
+
+    <section id="about" class="about">
+        <div class="about-content">
+            <h2>About Me</h2>
+            <p>
+                Hey there! 👋 I'm <strong>Ravi Kumar</strong>, a passionate
+                <span class="highlight">self-taught web developer</span> who loves building interactive, user-friendly,
+                and visually appealing websites & apps.
+                With a strong foundation in <strong>HTML</strong>, <strong>CSS</strong>, and
+                <strong>JavaScript</strong>, I’ve created over
+                <strong>50 JavaScript projects</strong> — ranging from fun mini-apps to fully functional web tools.
+            </p>
+            <p>
+                My focus is on writing clean, efficient code and crafting smooth, responsive experiences that work on
+                any device.
+                I’m constantly learning new technologies and improving my skills to stay up-to-date in the ever-changing
+                web world.
+            </p>
+            <p>
+                When I’m not coding, you’ll probably find me exploring UI/UX design trends, tweaking my projects for
+                perfection,
+                or enjoying a good cup of coffee ☕.
+            </p>
+        </div>
+    </section>
+
+    <section class="projects" id="project">
+        <h2>Projects</h2>
+        <div class="project-container">
+            <div class="project-card">
+                <div class="card-image">
+                    <img src="../images/13-form-validation.png" alt="form validation">
+                </div>
+                <div class="project-content">
+                    <h3>Form Validation</h3>
+                    <p>A form validation app that checks user input for correctness before submission.</p>
+                    <a href="../form-validation/">Live Preview</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="card-image">
+                    <img src="../images/23-hangman-game.png" alt="23-hangman-game">
+                </div>
+                <div class="project-content">
+                    <h3>Hangman Game</h3>
+                    <p>A hangman game where you guess letters to reveal a hidden word before running out of attempts.
+                    </p>
+                    <a href="../hangman-game/">Live Preview</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="card-image">
+                    <img src="../images/04-quiz-app.png" alt="04-quiz-app">
+                </div>
+                <div class="project-content">
+                    <h3>Quiz app</h3>
+                    <p>An interactive quiz app that tests your knowledge on various topics.</p>
+                    <a href="../quiz-app/">Live Preview</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="card-image">
+                    <img src="../images/28-expense-tracker.png" alt="28-expense-tracker">
+                </div>
+                <div class="project-content">
+                    <h3>Expaense tracker</h3>
+                    <p>An expense tracker that allows you to log and categorize your expenses, helping you manage your
+                        budget effectively. </p>
+                    <a href="../expense-tracker/">Live Preview</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="card-image">
+                    <img src="../images/12-password-generator.png" alt="12-password-generator">
+                </div>
+                <div class="project-content">
+                    <h3>Password generator</h3>
+                    <p>A password generator that creates strong passwords based on user-defined criteria.</p>
+                    <a href="../password-generator/">Live Preview</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="card-image">
+                    <img src="../images/18-bg-color-switcher.png" alt="18-bg-color-switcher">
+                </div>
+                <div class="project-content">
+                    <h3>BG color switcher</h3>
+                    <p>A background color switcher that changes the background color of the page when you click a
+                        button.</p>
+                    <a href="../bg-color-switcher/">Live Preview</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="contact-container">
+            <h2>Contact Me</h2>
+            <p>
+                Have a project in mind or just want to say hi?
+                Fill out the form below or reach out via email — I’ll get back to you as soon as I can!
+            </p>
+
+            <form action="https://formspree.io/f/yourformid" method="POST" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" name="name" id="name" required placeholder="Enter your name" />
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" name="email" id="email" required placeholder="Enter your email" />
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" rows="5" required placeholder="Write your message"></textarea>
+                </div>
+
+                <button type="submit" class="btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3>Ravi<span>.DEV</span></h3>
+                <p>Passionate Frontend Developer crafting beautiful, responsive websites with modern JavaScript.</p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <!-- <li><a href="#skills">Skills</a></li> -->
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-social">
+                <h4>Follow Me</h4>
+                <div class="social-icons">
+                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Ravi.Dev. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #111;
+}
+
+.wrapper {
+  border-radius: 8px;
+  box-shadow: 2px 5px 5px rgba(255, 255, 255, 0.2);
+  padding: 2rem;
+  text-align: center;
+  background-color: #fff;
+}
+
+.star-rating {
+  padding: 1rem;
+}
+
+.star-rating .star {
+  font-size: 4rem;
+  color: gray;
+  cursor: pointer;
+}

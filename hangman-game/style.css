@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #333;
+}
+
+.container {
+  width: 850px;
+  background-color: #fff;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 3rem;
+  padding: 3rem 2rem;
+}
+.container .image {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .image img {
+  width: 80%;
+}
+
+.word-section .letter-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.word-section .letter-list .letter {
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 20px;
+  border-bottom: 2px solid #000;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.word-section p {
+  margin-bottom: 1rem;
+}
+
+.word-section .keyboard-keys {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.word-section .keyboard-keys .key {
+  width: calc(100% / 9 - 5px);
+  aspect-ratio: 1;
+  cursor: pointer;
+  background-color: rgb(34, 34, 216);
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 4px;
+  border: 2px solid #000;
+}
+
+.word-section .keyboard-keys .key.correct {
+  background-color: lightgreen;
+}
+.word-section .keyboard-keys .key.wrong {
+  background-color: crimson;
+}
+
+.result-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2rem;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 2px 0 5px rgba(255, 255, 255, 0.5),
+    inset 2px 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.result-popup .result-img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.result-popup .result {
+  font-weight: 600;
+  width: max-content;
+}
+
+.result-popup .new-game {
+  padding: 0.5rem 1rem;
+  border: 1px solid #000;
+  border-radius: 8px;
+  margin-top: 1rem;
+  background-color: royalblue;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.result-popup .new-game:hover {
+  background-color: rgb(34, 34, 216);
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 756px) {
+  .container {
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0;
+  }
+}

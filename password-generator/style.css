@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  padding: 1rem;
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.container .input-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.input-container .pass-input {
+  padding: 0.3rem 1rem;
+  border-radius: 4px;
+  outline: none;
+}
+.input-container span {
+  padding: 0.3rem 1rem;
+  border-radius: 4px;
+  border: 1px solid #000;
+  cursor: pointer;
+  background-color: #333;
+  color: #fff;
+}
+
+.container .length {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  gap: 0.5rem;
+}
+
+.checkbox-container {
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkbox-container label {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.checkbox-container label:hover {
+  background-color: #999;
+  box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.8);
+}
+
+.checkbox-container label:has(input:checked) {
+  background-color: #0ff;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.4);
+}
+.checkbox-container label input {
+  display: none;
+}
+.checkbox-container label span {
+  font-weight: 600;
+}
+
+.gen-btn {
+  display: block;
+  width: 50%;
+  padding: 0.3rem;
+  border-radius: 8px;
+  background-color: #333;
+  color: #fff;
+  font-weight: 600;
+  margin-inline: auto;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.gen-btn:hover {
+  background-color: lightgray;
+  color: #000;
+}

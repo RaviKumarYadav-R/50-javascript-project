@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #141414;
+}
+
+.profile-card {
+  background-color: #343a40;
+  padding: 1rem;
+  border-radius: 24px;
+  max-width: 400px;
+  width: 100%;
+}
+
+.profile-card form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 5px #3c096c;
+}
+
+.profile-card form :where(input, button) {
+  border: none;
+  padding: 0.5rem;
+  color: #fff;
+}
+
+.profile-card form input {
+  flex: 1;
+  background-color: #212529;
+}
+
+.profile-card form button {
+  background-color: #7b2cbf;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.details {
+  margin-top: 1rem;
+  text-align: center;
+  color: #fff;
+}
+.details .image {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-inline: auto;
+  border: 5px solid #212529;
+  margin-bottom: 0.5rem;
+}
+
+.details .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.details h2 {
+  font-size: 1.2rem;
+}
+
+.details a {
+  text-decoration: none;
+  font-size: 0.8rem;
+  color: #9d4edd;
+}
+
+.details .bio {
+  font-size: 0.7rem;
+  line-height: 1.4;
+  color: #dee2e6;
+  margin-block: 0.4rem;
+}
+
+.details .repo-follow {
+  margin-top: 0.5rem;
+  padding: 0.4rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #212529;
+  border-radius: 8px;
+}
+
+.details .repo-follow span {
+  font-weight: 600;
+}
+
+.details .additional-info {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 0.5rem;
+}
+
+.details .additional-info i{
+    margin-right: 0.5rem;
+}

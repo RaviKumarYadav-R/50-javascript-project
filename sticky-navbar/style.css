@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.welcome{
+  text-align: center;
+  background-color: #010409;
+  border-bottom: 2px solid rgb(34, 34, 216);
+  color: #fff;
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 8rem;
+  background-color: #010409;
+  color: #f0f6fc;
+  border-bottom: 1px solid rgb(34, 34, 216);
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 0.5rem;
+}
+
+header nav ul li a {
+  font-size: 1.2rem;
+  font-weight: 500;
+  border: 1px solid transparent;
+  padding: 0.2rem 1rem;
+}
+header nav ul li a:hover {
+  border-color: rgb(34, 34, 216);
+}
+
+.hero-section {
+  text-align: center;
+  padding: 12rem 4rem;
+  background-color: rgb(13 17 23);
+  color: #fff;
+}
+
+.hero-section h1 {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-section a {
+  width: 300px;
+
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 2rem auto 0;
+  border: 1px solid rgb(34, 34, 216);
+}
+
+.hero-section a i {
+  font-size: 1.5rem;
+}
+
+.section {
+  text-align: center;
+  padding: 12rem 4rem;
+  background-color: rgb(0, 74, 119);
+  color: #fff;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+@media (max-width:856px){
+header{
+  padding: 2rem 4rem;
+}
+
+.hero-section h1{
+  font-size: 4rem;
+}
+}
+
+@media (max-width:480px){
+  .welcome{
+    font-size: 1rem;
+  }
+header{
+  padding: 2rem 2rem;
+}
+
+header .logo{
+  font-size: 1rem;
+}
+
+header nav ul{
+  gap: 0.1rem;
+}
+
+header nav ul li a{
+  padding: 0.2rem 0.5rem;
+  font-size: 1rem;
+}
+
+.hero-section h1{
+  font-size: 4rem;
+}
+
+.hero-section .sub-heading{
+  line-height: 1.5 ;
+}
+}

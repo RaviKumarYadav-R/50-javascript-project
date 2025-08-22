@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #c1c1c1;
+  padding-inline: 16px;
+}
+
+.container {
+  padding: 1rem;
+  background-color: #fff;
+  max-width: 400px;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.card-box {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+}
+.card-box .outer-card {
+  aspect-ratio: 1;
+  border-radius: 8px;
+  overflow: hidden;
+  perspective: 1000px;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.outer-card .inner-card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateY(180deg);
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  backface-visibility: hidden;
+}
+
+.back {
+  transform: rotateY(180deg);
+  background-color: purple;
+}
+
+.front {
+  background-color: lawngreen;
+}
+
+.outer-card.flip .inner-card {
+  transform: rotateY(0);
+}
+
+.container .winning-page {
+  padding: 2rem;
+  text-align: center;
+  width: 100%;
+}
+.winning-page .star-rating {
+  height: 80px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 0.7rem;
+  font-size: 3rem;
+  margin-bottom: 4rem;
+  color: #c1c1c1;
+}
+.winning-page .star-rating i:nth-child(2) {
+  align-self: flex-start;
+  animation-delay: 0.1s;
+}
+.winning-page .star-rating i:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.winning-page .star-rating i.active {
+  animation: glow 0.5s ease-in forwards;
+}
+
+@keyframes glow {
+  to {
+    transform: scale(1.2);
+    color: gold;
+    text-shadow: 0 0 5px rgba(255, 217, 0, 0.5), 0 0 10px rgba(255, 217, 0, 0.5),
+      0 0 15px rgba(255, 217, 0, 0.5);
+  }
+}
+
+.winning-page .message {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.timer-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.timer-box .restart {
+  padding: 0.5rem 1rem;
+  border: 1px solid #000;
+  border-radius: 8px;
+  background-color: royalblue;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.timer-box .restart:hover {
+  background-color: rgb(35, 85, 236);
+}
+
+.hidden {
+  display: none;
+}

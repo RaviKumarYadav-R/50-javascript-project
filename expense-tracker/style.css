@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.wrapper {
+  padding: 2rem;
+  border: 1px solid lightgray;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  max-width: 700px;
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+}
+
+.left-side,
+.right-side {
+  flex-grow: 1;
+  padding: 0.5rem;
+}
+.wrapper h1 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.balance-wrapper {
+  padding: 2rem;
+  background-image: linear-gradient(45deg, #0061ff, #60efff);
+  border: 1px solid rgba(0, 0, 0, 0.228);
+  border-radius: 8px;
+  color: #fff;
+}
+
+.balance-wrapper .balance .total-balance {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.balance-wrapper .balance-record {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.transaction-history {
+  margin-top: 1rem;
+}
+
+.transaction-history .history {
+  text-align: right;
+  margin-bottom: 0.5rem;
+  font-size: 0.8rem;
+  padding-right: 1rem;
+}
+
+.track-list {
+  max-height: 516px;
+  overflow-y: scroll;
+  padding: 1rem 0.5rem;
+}
+
+.track-list::-webkit-scrollbar {
+  width: 5px;
+  background-color: lightgrey;
+  border-radius: 8px;
+}
+
+.track-list::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(45deg, #0061ff, #60efff);
+  border-radius: 8px;
+}
+.track-list .list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}
+
+.track-list .list.income {
+  border-right: 5px solid lightgreen;
+}
+.track-list .list.expense {
+  border-right: 5px solid red;
+}
+
+.track-list .list p {
+  font-weight: 600;
+}
+.track-list .list span {
+  font-weight: 900;
+}
+
+.transaction-details {
+  padding: 1rem;
+}
+
+.transaction-details .btn-box {
+  gap: 0.5rem;
+  display: flex;
+  padding-inline: 1rem;
+  margin-bottom: 1rem;
+}
+
+.btn-box button {
+  width: 100%;
+  padding: 0.3rem;
+  border: 1px solid #000;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-box button.selected {
+  background-color: blue;
+  color: #fff;
+}
+
+.transaction-details .input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.transaction-details .input-group label {
+  font-weight: 600;
+}
+.transaction-details .input-group input {
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}
+
+.transaction-details .add-btn {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #0066ff;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+.transaction-details .add-btn:hover {
+  background-color: #0a5ad2;
+}
+
+@media (max-width: 620px) {
+  body {
+    align-items: flex-start;
+  }
+  .wrapper {
+    flex-direction: column;
+    padding: 1rem;
+  }
+}

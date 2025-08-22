@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advance Todo App</title>
+
+    <!-- Font Awesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="./js/Main.js" type="module"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="form-wrapper">
+        <form>
+          <input
+            type="text"
+            id="todo-input"
+            placeholder="Enter Your Task Here..."
+            autocomplete="off"
+          />
+          <button>Add Todo</button>
+        </form>
+
+        <div class="search-filter">
+          <div class="input-group">
+            <label for="search-input"
+              ><i class="fa-solid fa-magnifying-glass"></i
+            ></label>
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Search Todo"
+              autocomplete="off"
+            />
+          </div>
+
+          <div class="filter">
+            <button id="filter">
+              <i class="fa-solid fa-filter"></i> Filter
+            </button>
+
+            <div class="filter-btn-box hidden">
+              <div class="filter-btn">
+                <input type="radio" name="task" id="all" value="all" />
+                <label for="all">All</label>
+              </div>
+              <div class="filter-btn">
+                <input
+                  type="radio"
+                  name="task"
+                  id="completed"
+                  value="completed"
+                />
+                <label for="completed">Completed</label>
+              </div>
+              <div class="filter-btn">
+                <input type="radio" name="task" id="pending" value="pending" />
+                <label for="pending">Pending</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <ul class="list-container"></ul>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #212121;
+}
+
+.calculator-wrapper {
+  width: 300px;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.calculator-wrapper .display {
+  background-color: #fff;
+  padding: 3rem 1rem;
+}
+
+.calculator-wrapper .display .equation {
+  color: gray;
+}
+.calculator-wrapper .display .result-input {
+  width: 100%;
+  font-size: 1.5rem;
+  border: none;
+  outline: none;
+  color: #000;
+  text-align: right;
+}
+
+.calculator-wrapper .buttons {
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+  backdrop-filter: blur(10px);
+}
+.calculator-wrapper .buttons .button {
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  border: none;
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
+    rgba(0, 0, 0, 0.8) -3px -2px 16px 0px;
+  cursor: pointer;
+}
+.calculator-wrapper .buttons .button.special {
+  background-color: lightblue;
+  box-shadow: rgba(173, 216, 230, 0.48) 6px 2px 16px 0px,
+    rgba(0, 0, 0, 0.8) -3px -2px 16px 0px;
+}

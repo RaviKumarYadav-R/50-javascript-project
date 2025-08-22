@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #414141;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #333;
+}
+
+.wrapper {
+  width: 350px;
+  margin: 50px auto;
+  padding: 5px;
+  background-image: linear-gradient(
+    45deg,
+    violet,
+    blue,
+    green,
+    yellow,
+    orange,
+    red
+  );
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-size: 200% 200%;
+  background-clip: border-box;
+  animation: backgroundAnimation 10s infinite linear alternate;
+}
+
+@keyframes backgroundAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.wrapper .login-container {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.login-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.login-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login-container form input[type="text"],
+.login-container form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.login-container form input[type="text"]::placeholder,
+.login-container form input[type="password"]::placeholder {
+  color: #999;
+}
+.login-container form input[type="text"]:focus,
+.login-container form input[type="password"]:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.login-container form button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login-container form button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.login-container form .input-group-password {
+  position: relative;
+}
+.login-container form .input-group-password input[type="password"] {
+  padding-right: 40px; /* Space for the show/hide button */
+}
+.login-container form #show-password {
+  display: none;
+}
+.login-container form #show-password + label {
+  cursor: pointer;
+  font-size: 14px;
+  color: #007bff;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transition: color 0.3s ease;
+}

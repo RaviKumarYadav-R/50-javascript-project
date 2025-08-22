@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding-inline: 16px  ;
+}
+
+.wrapper {
+  max-width: 500px;
+  width: 100%;
+  padding: 2rem;
+  border: 1px solid #fff;
+  border-radius: 16px;
+  background-color: rgba(255, 255, 255, 0.22);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.wrapper input {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: transparent;
+  border: 1px solid #fff;
+  outline: none;
+  color: #fff;
+}
+.wrapper input::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+.wrapper .group-box {
+  width: 100%;
+}
+
+.wrapper .group-box .group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+.wrapper .group-box .group select {
+  width: 100%;
+  appearance: base-select;
+  padding: 0.5rem 1rem;
+  outline: none;
+  border: 1px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+}
+.wrapper .group-box .group select:hover,
+.wrapper .group-box .group select:focus {
+  background-color: #ddd;
+  color: #000;
+}
+
+.wrapper .group-box .group select::picker-icon {
+  display: none;
+}
+.wrapper .group-box .group select option:nth-child(odd) {
+  background-color: lightskyblue;
+}
+.wrapper .group-box .group select option:nth-child(even) {
+  background-color: lightsteelblue;
+}
+
+.wrapper .convert {
+  width: 100%;
+  background-color: #63c8ff;
+  border: none;
+  outline: none;
+  padding: 0.5rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.wrapper .result {
+  width: 100%;
+  text-align: center;
+  background-color: #fff;
+  padding: 0.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.8rem;
+}

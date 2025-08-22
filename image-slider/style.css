@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.wrapper {
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  overflow: hidden;
+  padding: 0 16px;
+}
+
+.carousel {
+  flex: 1;
+  overflow: hidden;
+}
+
+.image-container {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.image-container img {
+  width: 100%;
+  flex-shrink: 0;
+  object-fit: cover;
+  aspect-ratio: 16/9;
+  display: block;
+}
+
+.swipe {
+  font-size: 2rem;
+  cursor: pointer;
+  user-select: none;
+}

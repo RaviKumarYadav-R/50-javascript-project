@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #333;
+}
+
+.player-wrapper {
+  padding: 3rem;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  border: 1px solid #fff;
+  border-radius: 16px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.player-wrapper .circle {
+  width: 100px;
+  height: 100px;
+  border: 5px solid #000;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  background-image: url(./images/Cover\ of\ Die\ With\ A\ Smile\ by\ Lady\ Gaga\,\ Bruno\ Mars.jpg);
+  background-size: cover;
+  background-position: top center;
+}
+
+audio {
+  width: 50px;
+}
+
+.player-wrapper .controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.player-wrapper .controls .ctrl-play {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 30px;
+  border: 1px solid #000;
+  cursor: pointer;
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
+    rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}
+.player-wrapper .controls .ctrl-play:nth-child(2) {
+  transform: scale(1.5);
+}
+
+#progress {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 150px;
+  height: 15px;
+  border: 1px solid #000;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+#progress::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #00fd0a;
+  cursor: pointer;
+  border: 4px solid #333;
+  box-shadow: -150px 0 0 150px #00fddb;
+}
+
+@media (max-width: 600px) {
+  .player-wrapper {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}

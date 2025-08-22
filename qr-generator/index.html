@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="qr-wrapper">
+    <div class="qr-image">
+      <img src="" alt="" />
+    </div>
+
+    <div class="inputs-box">
+      <div class="group">
+        <label for="text">Text</label>
+        <input type="text" id="text" value="Hello World!" />
+      </div>
+      <div class="group">
+        <label for="size">size (px)</label>
+        <input type="number" id="size" value="200" max="200"/>
+      </div>
+      <div class="group">
+        <label for="margin">Margin</label>
+        <input type="number" id="margin" value="4" />
+      </div>
+      <div class="group">
+        <label for="bgc">Background Color</label>
+        <input type="color" id="bgc" value="#ffffff" colorpick-eyedropper-active="false"/>
+      </div>
+      <div class="group">
+        <label for="fgc">Forground Color</label>
+        <input type="color" id="fgc" value="#000000" colorpick-eyedropper-active="false"/>
+      </div>
+      <div class="group">
+        <label for="url">logo URL</label>
+        <input type="url" id="url" />
+      </div>
+
+      <button class="download">Download Qr</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

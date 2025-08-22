@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  margin-top: 3rem;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.container .form-group h1 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.container .form-group .group label {
+  font-weight: 600;
+  margin-left: 1rem;
+}
+
+.container .form-group .group input {
+  width: 100%;
+  padding: 0.4rem;
+  border: 1px solid #000;
+  outline: none;
+  border-radius: 4px;
+  margin-block: 0.2rem 1rem;
+  background-color: transparent;
+}
+
+.container .form-group .add-Bookmark {
+  display: block;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #000;
+  margin-inline: auto;
+  cursor: pointer;
+  background-color: rgb(34, 34, 216);
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.container .bookmark-list .list {
+  list-style: none;
+  border: 1px solid rgb(34, 34, 216);
+  padding: 0.2rem 0.5rem;
+  border-radius: 8px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+.container .bookmark-list .list:not(:last-child) {
+ margin-bottom: 0.5rem;
+}
+
+.bookmark-list .list .details p {
+  font-size: 0.8rem;
+}
+.bookmark-list .list .details .date {
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.bookmark-list .list .btn-box {
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.bookmark-list .list .btn-box button {
+  padding: 0.4rem;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  flex-grow: 1;
+  color: #fff;
+}
+.bookmark-list .list .btn-box button.open {
+  background-color: #2222d8;
+}
+.bookmark-list .list .btn-box button.delete {
+  background-color: crimson;
+}
+
+@media (max-width:600px){
+  .container{
+    min-height: 100vh;
+    margin-top: 0;
+    border-radius: 0;
+  }
+}
