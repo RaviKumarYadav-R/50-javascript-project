@@ -1,26 +1,16 @@
-let hourEl = document.querySelector("#hour");
-let minuteEl = document.querySelector("#minute");
-let secondEl = document.querySelector("#second");
-let dayEl = document.querySelector("#day");
-let dateEl = document.querySelector("#date");
+const day = document.querySelector(".day");
+const hour = document.querySelector(".hour");
+const minute = document.querySelector(".minute");
+const second = document.querySelector(".second");
 
-function updateClock() {
-  let now = new Date();
-  let hour = now.getHours();
-  let minute = now.getMinutes();
-  let second = now.getSeconds();
-  let day = now.toLocaleDateString("en-IN", { weekday: "short" });
-  let date = now.toLocaleDateString("en-IN", { dateStyle: "long" });
+const dayName = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
 
-  hour = hour < 10 ? "0" + hour : hour;
-  minute = minute < 10 ? "0" + minute : minute;
-  second = second < 10 ? "0" + second : second;
-
-  hourEl.innerHTML = hour;
-  minuteEl.innerHTML = minute;
-  secondEl.innerHTML = second;
-  dayEl.innerHTML = day;
-  date.innerHTML = date;
+function initTime() {
+  const now = new Date();
+  hour.innerText = now.getHours().toString().padStart(2, "0");
+  minute.innerText = now.getMinutes().toString().padStart(2, "0");
+  second.innerText = now.getSeconds().toString().padStart(2, "0");
+  day.innerText = dayName[now.getDay()];
 }
 
-setInterval(updateClock, 1000);
+setInterval(initTime, 1000)

@@ -1,27 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Todo List App</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
-  </head>
-  <body>
-    <div class="todo-container">
-      <div class="input-box">
-        <form>
-          <input
-            type="text"
-            id="input"
-            placeholder="Add your Task..."
-            autocomplete="off"
-          />
-          <button class="add-task">Add Task</button>
-        </form>
+<html lang="en" data-theme="dark">
 
-        <ul class="task-list"></ul>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Todo List App</title>
+  <!-- font awesome cdn for icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <div class="todo-container">
+    <header>
+      <div class="date-active">
+        <p class="date">Saturday, June 1</p>
+        <small class="active-task">2 Active Tasks</small>
       </div>
+
+      <button aria-label="theme-btn" class="theme"><i class="fa-solid fa-sun"></i></button>
+    </header>
+
+    <div class="todo-wrapper">
+      <form>
+        <input type="text" placeholder="Enter a task...">
+        <button>Add Task</button>
+      </form>
+
+      <ul class="task-list">
+      </ul>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>

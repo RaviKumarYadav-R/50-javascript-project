@@ -1,23 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Digital Clock</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
-  </head>
-  <body>
-    <div class="clock-container">
-      <div class="clock">
-        <span id="hour">00</span> : <span id="minute">00</span> :
-        <span id="second">00</span>
-      </div>
 
-      <div class="calander">
-        <span id="day">Mon</span>,
-        <span id="date">01/05/2025</span>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digital Clock</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <div class="digital-clock">
+    <h1>Digital Clock</h1>
+    <div class="clock-container">
+      <div class="box">
+        <h2 class="day">Sat</h2>
+        <span>Day</span>
+      </div> <span class="dot">:</span>
+      <div class="box">
+        <h2 class="hour">02</h2>
+        <span>Hour</span>
+      </div> <span class="dot">:</span>
+      <div class="box">
+        <h2 class="minute">40</h2>
+        <span>Min</span>
+      </div> <span class="dot">:</span> 
+      <div class="box">
+        <h2 class="second">30</h2>
+        <span>Sec</span>
       </div>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>

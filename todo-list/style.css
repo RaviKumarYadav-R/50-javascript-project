@@ -2,6 +2,31 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+:root {
+  /* 🌞 Light Theme */
+  --color-bg: #f9fafb;
+  --color-card: #ffffff;
+  --color-primary: #2563eb;
+  --color-primary-hover: #1e40af;
+  --color-text: #1f2937;
+  --color-text-light: #6b7280;
+  --color-border: #e5e7eb;
+  --color-warning: #f59e0b; 
+}
+
+[data-theme="dark"] {
+  /* 🌙 Dark Theme */
+  --color-bg: #111827;
+  --color-card: #1f2937;
+  --color-primary: #3b82f6;
+  --color-primary-hover: #2563eb;
+  --color-text: #f3f4f6;
+  --color-text-light: #9ca3af;
+  --color-border: #374151;
+  --color-warning: #fbbf24;
 }
 
 body {
@@ -9,77 +34,119 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: #212121;
-  color: #fff;
+  background-color: var(--color-bg);
+  color: var(--color-text);
   padding: 16px 32px;
 }
 
 .todo-container {
-  padding: 1rem;
-  border: 1px solid #fff;
-  max-width: 500px;
+  max-width: 600px;
   width: 100%;
+  background-color: var(--color-card);
+  border: 1px solid var(--color-border);
+  padding: 2rem;
 }
 
-.todo-container .input-box form {
+.todo-container header {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+header .date {
+  font-size: 1.3rem;
+}
+header .active-task {
+  color: var(--color-text-light);
+}
+
+header .theme {
+  width: 30px;
+  height: 30px;
+  background-color: var(--color-warning);
+  border: none;
+  border-radius: 16px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 0 10px var(--color-primary);
+}
+
+.todo-wrapper form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.todo-wrapper form input {
+  flex: 1;
+  outline: none;
+  padding: 0.5rem;
+  border: 1px solid var(--color-border);
+}
+.todo-wrapper form button {
+  padding: 0.5rem;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-primary);
+  color: #fff;
+  cursor: pointer;
+}
+.todo-wrapper form button:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.todo-wrapper .task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.todo-wrapper .task-list .item {
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
   justify-content: space-between;
   gap: 1rem;
+  border-bottom: 1px solid var(--color-text);
 }
-.todo-container .input-box form > * {
-  padding: 8px;
+
+.todo-wrapper .task-list .item label {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--color-warning);
   border-radius: 8px;
-  background-color: transparent;
-  border: 1px solid #fff;
+  overflow: hidden;
+  cursor: pointer;
+}
+.todo-wrapper .task-list .item label input {
+  display: none;
+}
+.todo-wrapper .task-list .item label span {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-size: 0.6rem;
   color: #fff;
-  outline:none;
 }
-.todo-container .input-box form input {
-  flex-grow: 1;
-}
-.todo-container .input-box form button {
-  cursor: pointer;
-  transition: 0.2s;
-}
-.todo-container .input-box form button:hover {
-  background-color: crimson;
-  border-color: crimson;
-}
-
-.todo-container .task-list {
-  margin-top: 1rem;
-  max-height: 700px;
-}
-
-.todo-container .task-list .list {
+.todo-wrapper .task-list .item label input:checked + span {
   display: flex;
-  justify-content: space-between;
-  background-color: rgba(255, 255, 255, 0.2);
-  padding: 8px;
-  border-radius: 4px;
-  border: 1px solid #fff;
-  margin-bottom: 10px;
 }
-
-.todo-container .task-list .list .task {
-  flex-grow:1;
+.todo-wrapper .task-list .item .task {
+  flex: 1;
 }
-
-.todo-container .task-list .list.complete {
-  background-color: rgba(0, 255, 0, 0.5);
-}
-.todo-container .task-list .list.complete .task {
+.todo-wrapper .task-list .item.completed .task {
   text-decoration: line-through;
+  color: var(--color-text-light);
 }
-.todo-container .task-list .list.complete {
-  background-color: rgba(0, 255, 0, 0.5);
-}
-
-.todo-container .task-list .list .delete {
+.todo-wrapper .task-list .item .delete {
+  background-color: transparent;
+  border: none;
+  color: var(--color-text-light);
   cursor: pointer;
-  transition: 0.2s;
-}
-.todo-container .task-list .list .delete:hover {
-  color: red;
-  transform: scale(1.1);
 }
